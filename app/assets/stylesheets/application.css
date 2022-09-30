@@ -15,3 +15,105 @@
  */
  @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
  
+ @font-face
+{
+  font-family: 'stilted';
+  src: local('stilted'), url(./fonts/stilted_font.ttf) format('truetype');
+}
+
+#container-div {
+  background-color: #E5392B;
+  border-radius: 15px; 
+  padding: 10px;
+}
+
+body {
+  background-color: #191B1B;
+}
+
+textarea {
+  width: 100%;
+  height: 130px;
+}
+
+input {
+  width: 100%;
+}
+
+.white {
+  color: white;
+}
+
+.grey {
+  color: grey;
+}
+
+.dark-background {
+  background-color:#191B1B;
+}
+
+.nav-background {
+  background-color: #E5392B;
+}
+
+.card {
+  margin: 20px;
+  padding: 8px;
+}
+
+.subContainer{
+  margin-left: 60px;
+}
+
+.center-text {
+  text-align: center
+}
+
+.music-container{
+  width: 50%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: 'Bebas Neue', cursive;
+}
+
+.album {
+  border: 0; 
+  width: 100%; 
+  height: 274px;
+}
+
+.track {
+  border: 0; 
+  width: 100%; 
+  height: 120px;
+}
+
+.track-mobile {
+  border: 0; 
+  width: 100%; 
+  height: 42px;
+}
+
+.logo {
+  font-family: 'stilted' !important;
+  font-weight: bold !important;
+  color:#191B1B;
+  text-decoration: none;
+}
+
+.logo:hover {
+  color:white;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sriracha&display=swap');

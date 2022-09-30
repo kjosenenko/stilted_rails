@@ -14,11 +14,11 @@
  *= require_self
  */
  @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sriracha&display=swap');
  
- @font-face
-{
+ @font-face {
   font-family: 'stilted';
-  src: local('stilted'), url(./fonts/stilted_font.ttf) format('truetype');
+  src: url("/assets/fonts/stilted_font.ttf") format('truetype');
 }
 
 #container-div {
@@ -115,5 +115,3 @@ body {
   height: 100%;
   width: 100%;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sriracha&display=swap');

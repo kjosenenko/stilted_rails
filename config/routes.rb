@@ -3,4 +3,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "home#index"
+
+  resources :contact, only: [:index]
+  resources :music, only: [:index]
+  resources :shows, only: [:index]
+  resources :merch, only: [:index]
 end

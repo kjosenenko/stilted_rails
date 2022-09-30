@@ -1,19 +1,19 @@
 .navbar.navbar-expand-lg.nav-background
   .container-fluid
-    -# <Link className="logo" to="/"><h1>STILTED</h1></Link>
+    %h1.logo= link_to 'STILTED', root_path
     .d-none.d-lg-block
       %ul.navbar-nav.me-auto.mb-2.mb-lg-0
-        %li.nav-link Listen
-        -# <Link className="btn btn-dark" to="/music">Listen Now</Link></li>
-        %li.nav-link Upcoming
-        -# <Link className="btn btn-dark" to="/shows">Upcoming Shows</Link></li>
-        %li.nav-link Merch
-        -# <Link className="btn btn-dark" to="/merch">Merch</Link></li>
-        %li.nav-link Contact
-        -# Link className="btn btn-dark" to="/contact">Booking / Contact </Link></li>
+        %li.nav-link
+          = link_to 'Listen Now', music_index_path, class: 'btn btn-dark'
+        %li.nav-link
+          = link_to 'Upcoming Shows', shows_path, class: 'btn btn-dark'
+        %li.nav-link
+          = link_to 'Merch', merch_index_path, class: 'btn btn-dark'
+        %li.nav-link
+          = link_to 'Booking / Contact', contact_index_path, class: 'btn btn-dark'
     .d-lg-none
-    .btn-group
-      -# <Link className="btn btn-dark" to="/shows">Shows</Link>
-      -# <Link className="btn btn-dark" to="/music">Music</Link>
-      -# <Link className="btn btn-dark" to="/merch">Merch</Link>
-      -# <Link className="btn btn-dark" to="/contact">Contact</Link>
+      .btn-group
+        = link_to 'Shows', shows_path, class: 'btn btn-dark'
+        = link_to 'Music', music_index_path, class: 'btn btn-dark'
+        = link_to 'Merch', merch_index_path, class: 'btn btn-dark'
+        = link_to 'Contact', contact_index_path, class: 'btn btn-dark'

@@ -11,6 +11,10 @@
     = javascript_importmap_tags
   %body
     =render partial: "layouts/navigation"
-    = yield
+    %br.d-none.d-lg-block
+    #container-div.container.d-none.d-lg-block
+      = yield
+    #mobile-container.d-md-block.d-lg-none
+      = yield
     %br
     =render partial: "layouts/footer"

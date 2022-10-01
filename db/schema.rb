@@ -10,8 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_29_021737) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_01_041045) do
+  create_table "contacts", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "phone"
+    t.string "subject"
+    t.text "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "shows", force: :cascade do |t|
+    t.string "venue"
+    t.string "presale_link"
+    t.boolean "has_presale"
+    t.json "support_acts"
+    t.datetime "show_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

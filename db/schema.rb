@@ -25,8 +25,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_01_041045) do
     t.string "venue"
     t.string "presale_link"
     t.boolean "has_presale"
-    t.json "support_acts"
-    t.datetime "show_time"
+    t.text "supporting_acts"
+    t.string "show_time"
+    t.date "show_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

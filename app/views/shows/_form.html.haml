@@ -1,0 +1,29 @@
+.black
+  %h1.center-text NEW SHOW
+  =form_for @show do |f|
+    .row.my-1
+      .col-md-8
+        =f.label :venue, 'Venue'
+        =f.text_field :venue
+      .col-md-4
+        =f.label :show_date, 'Show Date'
+        =f.date_field :show_date
+    .row.my-1
+      .col-md-1
+        =f.label :has_presale, 'Has Presale'
+        =f.check_box :has_presale
+      .col-md-7
+        =f.label :presale_link, 'Presale Link'
+        =f.text_field :presale_link
+      .col-md-4
+        =f.label :show_time, 'Show Time'
+        =f.text_field :show_time
+    .row.my-1
+      .col-md-12
+        =f.label :supporting_acts, 'Supporting Acts'
+        =f.text_field :supporting_acts
+    .row.my-2
+      .col-md-1
+        =f.submit 'Save', class: 'btn btn-success'
+      .col-md-1
+        =link_to 'Cancel', shows_path, class: 'btn btn-dark'

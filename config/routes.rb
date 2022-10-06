@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :messages, only: [:new, :create]
   resources :music, only: [:index]
-  resources :shows, only: [:index, :new, :create, :edit, :update, :destroy]
+  # resources :shows, only: [:index, :new, :create, :edit, :update, :destroy]
+  resources :shows, only: [:index]
   resources :merch, only: [:index]
 end

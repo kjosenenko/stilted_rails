@@ -5,15 +5,17 @@
       .card
         .card-body
           %h3=show.venue
-          %h5 
-            With
-            =show.supporting_acts
+          -if show.supporting_acts.present?
+            %h5 
+              With
+              =show.supporting_acts
           %h5
             =show.show_date.strftime('%m/%d/%Y')
             =show.show_time
-          -if show.has_presale
+          -if show.presale_link.present?
             =link_to 'Tickets', show.presale_link
   -else @shows
     .card
       .card-body
         %h5.center-text No shows at this time. Please check back later.
+%br

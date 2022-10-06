@@ -1,22 +1,24 @@
 .black
   %h1.center-text CONTACT US
-  =form_for @message do |f|
-    .row.my-2
-      .col-md-6
-        =f.label :contact_name, 'Name'
-        =f.text_field :contact_name
-      .col-md-6
-        =f.label :contact_email, 'Email'
-        =f.text_field :contact_email
-    .row.my-2
-      .col-md-6
-        =f.label :message_subject, 'Subject'
-        =f.text_field :message_subject
-      .col-md-6
-        =f.label :contact_phone, 'Phone'
-        =f.text_field :contact_phone
-    .my-2
-      =f.label :message_body, "message"
-      =f.text_area :message_body
-    .col-md-1
-      =f.submit 'Send', class: 'btn btn-dark'
+  .container
+    =form_for @message do |f|
+      .row.my-2
+        .col-md-6
+          =f.label :contact_name, 'Name'
+          =f.text_field :contact_name
+        .col-md-6
+          =f.label :contact_email, 'Email'
+          =f.text_field :contact_email
+      .row.my-2
+        .col-md-6
+          =f.label :message_subject, 'Subject'
+          =f.text_field :message_subject
+        .col-md-6
+          =f.label :contact_phone, 'Phone'
+          =f.text_field :contact_phone
+      .my-2
+        =f.label :message_body, "message"
+        =f.text_area :message_body
+      .col-md-1
+        =f.submit 'Send', class: 'btn btn-dark'
+%br

@@ -25,6 +25,6 @@ class ShowsController < ApplicationController
 
   private
   def show_params
-    params.require(:show).permit(:venue, :presale_link, :has_presale, :supporting_acts, :show_time, :show_date)
+    params.require(:show).permit(:venue, :presale_link, :supporting_acts, :show_time, :show_date)
   end
 end

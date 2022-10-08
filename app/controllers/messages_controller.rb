@@ -6,12 +6,15 @@ class MessagesController < ApplicationController
   def create
     @message = Message.find_or_create_by(contact_email: message_params[:contact_email])
     if @message.update(message_params)
-      redirect_to root_path
-      # redirect to a success path
+      redirect_to success_messages_path
     else
-      # render a trubo frame
+      flash[:errors] = @message.errors.full_messages
       render :new
     end
+  end
+
+  def success
+
   end
 
   private

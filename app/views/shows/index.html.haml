@@ -1,5 +1,6 @@
 .black
   %h1.center-text.monoton SHOWS AND DATES
+  -# =link_to 'Add New Show', new_show_path, class: 'btn btn-primary'
   -if @shows.any?
     -@shows.each do |show|
       .card
@@ -14,6 +15,9 @@
             =show.show_time
           -if show.presale_link.present?
             =link_to 'Tickets', show.presale_link
+          -# -if show.id
+          -#   %br
+          -#   =link_to 'Edit Show Details', edit_show_path(show), class: 'btn btn-warning'
   -else @shows
     .card
       .card-body

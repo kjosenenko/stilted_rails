@@ -1,6 +1,10 @@
 .black
   %h1.center-text NEW SHOW
-  =form_for @show do |f|
+  -if flash[:errors]
+    %ul.alert.alert-warning
+      -flash[:errors].each do |e|
+        %li=e
+  =form_for @show, data: { turbo: false }do |f|
     .row.my-1
       .col-md-8
         =f.label :venue, 'Venue'
@@ -24,3 +28,12 @@
         =f.submit 'Save', class: 'btn btn-success'
       .col-md-1
         =link_to 'Cancel', shows_path, class: 'btn btn-dark'
+      -if @show.id 
+        .col-md-1
+          =button_to 'Delete', @show, class: 'btn btn-warning', method: :delete, onclick: "return confirmDestroy('Are you sure want delete this show?')"
+:javascript
+  function confirmDestroy(message) {
+    if (!confirm(message)) {
+      return false
+    }
+  }

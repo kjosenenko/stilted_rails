@@ -129,6 +129,11 @@ body {
   border-radius: 10px;
 }
 
+.show_image {
+  max-height: 400px;  
+  width: auto; 
+}
+
 a:link {
   color: #E5392B;
 }

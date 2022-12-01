@@ -3,20 +3,24 @@
 -if @shows.any?
   -@shows.each do |show|
     .card
-      .card-body
-        %h3=show.venue
-        -if show.supporting_acts.present?
-          %h5 
-            With
-            =show.supporting_acts
-        %h5
-          =show.show_date.strftime('%m/%d/%Y')
-          =show.show_time
-        -if show.presale_link.present?
-          =link_to 'More info', show.presale_link
-        -# -if show.id
-        -#   %br
-        -#   =link_to 'Edit Show Details', edit_show_path(show), class: 'btn btn-warning'
+      .row
+        .col-md-3
+          =image_tag('surfside_12_8_22.jpeg', class: 'show_image')
+        .col-md-9
+          .card-body
+            %h3=show.venue
+            -if show.supporting_acts.present?
+              %h5 
+                With
+                =show.supporting_acts
+            %h5
+              =show.show_date.strftime('%m/%d/%Y')
+              =show.show_time
+            -if show.presale_link.present?
+              =link_to 'More info', show.presale_link
+            -# -if show.id
+            -#   %br
+            -#   =link_to 'Edit Show Details', edit_show_path(show), class: 'btn btn-warning'
 -else @shows
   .card
     .card-body

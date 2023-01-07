@@ -1,28 +1,11 @@
 %h1.center-text.monoton SHOWS AND DATES
--# =link_to 'Add New Show', new_show_path, class: 'btn btn-primary'
--if @shows.any?
-  -@shows.each do |show|
-    .card
-      .row
-        .col-md-3
-          =image_tag('surfside_12_8_22.jpg', class: 'show_image')
-        .col-md-9
-          .card-body
-            %h3=show.venue
-            -if show.supporting_acts.present?
-              %h5 
-                With
-                =show.supporting_acts
-            %h5
-              =show.show_date.strftime('%m/%d/%Y')
-              =show.show_time
-            -if show.presale_link.present?
-              =link_to 'More info', show.presale_link, { :style => "color: #E5392B;" }
-            -# -if show.id
-            -#   %br
-            -#   =link_to 'Edit Show Details', edit_show_path(show), class: 'btn btn-warning'
--else @shows
+-if @upcoming.any?
+  =render partial: 'list', locals: {shows: @upcoming}
+-else @upcoming
   .card
     .card-body
-      %h5.center-text No shows at this time. Please check back later.
+      %h5.center-text No new shows at this time. Please check back later.
+-if @past.any?
+  %h2.mx-4 Past Shows
+  =render partial: 'list', locals: {shows: @past}
 %br

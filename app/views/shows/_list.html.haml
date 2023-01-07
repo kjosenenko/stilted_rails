@@ -1,0 +1,17 @@
+-shows.each do |show|
+  .card
+    .row
+      -# .col-md-3
+        -# =image_tag('surfside_12_8_22.jpg', class: 'show_image')
+      .col-md-12
+        .card-body
+          %h3=show.venue
+          -if show.supporting_acts.present?
+            %h5 
+              With
+              =show.supporting_acts
+          %h5
+            =show.show_date.strftime('%m/%d/%Y')
+            =show.show_time
+          -if show.current? && show.presale_link.present?
+            =link_to 'More info', show.presale_link, { :style => "color: #E5392B;" }

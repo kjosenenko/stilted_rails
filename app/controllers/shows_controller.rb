@@ -3,8 +3,8 @@ class ShowsController < ApplicationController
   before_action :get_show, only: [:edit, :update, :destroy]
 
   def index
-    @upcoming = Show.upcoming
-    @past = Show.past
+    @upcoming = Show.upcoming.order(:show_date)
+    @past = Show.past.order(show_date: :desc)
   end
 
   def new
